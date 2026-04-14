@@ -37,6 +37,8 @@ collect_aggregate:
     - 'num_l1d_mshr_entry_fail_per_sm_max\s*=\s*(.*)'
     - 'num_l1d_mshr_merge_fail_total\s*=\s*(.*)'
     - 'num_l1d_mshr_merge_fail_per_sm_max\s*=\s*(.*)'
+    - 'num_l1d_miss_queue_full_total\s*=\s*(.*)'
+    - 'num_l1d_miss_queue_full_per_sm_max\s*=\s*(.*)'
 
 
 # These stats are reset each kernel and should not be diff'd
