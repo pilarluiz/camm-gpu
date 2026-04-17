@@ -142,6 +142,9 @@ RR:
 GTO:
     extra_params: "-gpgpu_scheduler gto"
 
+REACTIVE_MEM:
+    extra_params: "-gpgpu_scheduler reactive_mem"
+
 128B:
     extra_params: "-gpgpu_mem_addr_mapping dramid@7;00000000.00000000.00000000.00000000.0000RRRR.RRRRRRRR.RBBBCCCC.BCCSSSSS"
 
