@@ -53,3 +53,7 @@ collect_rates:
     - 'gpgpu_simulation_rate\s+=\s+(.*)\s+\(cycle\/sec\)'
     - 'gpgpu_silicon_slowdown\s*=\s*(.*)x'
     - 'gpu_tot_ipc\s*=\s*(.*)'
+    - 'L2_BW_total\s*=\s*(.*)\s+GB\/Sec'
+    - 'gpu_tot_occupancy\s*=\s*(.*)%'
+    - '\s+L1D_total_cache_miss_rate\s*=\s*(.*)'
+    - 'L2_total_cache_miss_rate\s*=\s*(.*)'
