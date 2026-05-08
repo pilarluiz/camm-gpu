@@ -37,6 +37,11 @@ collect_aggregate:
     - 'num_l1d_mshr_entry_fail_per_sm_max\s*=\s*(.*)'
     - 'num_l1d_mshr_merge_fail_total\s*=\s*(.*)'
     - 'num_l1d_mshr_merge_fail_per_sm_max\s*=\s*(.*)'
+    - 'L1_L2_coalesce_buffer_size\s*=\s*(.*)'
+    - 'L1_L2_coalesce_min_cycles\s*=\s*(.*)'
+    - 'L1_L2_coalesce_total_enqueues\s*=\s*(.*)'
+    - 'L1_L2_coalesce_total_merged\s*=\s*(.*)'
+    - 'L1_L2_coalesce_total_drained\s*=\s*(.*)'
 
 
 # These stats are reset each kernel and should not be diff'd
@@ -57,3 +62,4 @@ collect_rates:
     - 'gpu_tot_occupancy\s*=\s*(.*)%'
     - '\s+L1D_total_cache_miss_rate\s*=\s*(.*)'
     - 'L2_total_cache_miss_rate\s*=\s*(.*)'
+    - 'L1_L2_coalesce_merge_rate\s*=\s*(.*)'

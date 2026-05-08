@@ -133,9 +133,38 @@ FRFCFS:
 FCFS:
     extra_params: "-gpgpu_dram_scheduler 0"
 
-# Appended by run_coalesce_experiments.sh -- L1<->L2 coalescing buffer.
-# Compose with the baseline (e.g. ECE511_TITANV-COALESCE16_0)
-# to enable a 16-entry buffer with a
-# 0-cycle minimum hold.
+# Appended by run_coalesce_experiments.sh -- L1<->L2 coalescing buffer grid.
+# Compose with the baseline (e.g. ECE511_TITANV-COALESCE32_16) to enable
+# the corresponding (buffer-size, min-cycle-hold) pair.
 COALESCE16_0:
     extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 16 -gpgpu_l1_l2_coalesce_min_cycles 0"
+COALESCE16_16:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 16 -gpgpu_l1_l2_coalesce_min_cycles 16"
+COALESCE16_32:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 16 -gpgpu_l1_l2_coalesce_min_cycles 32"
+COALESCE16_64:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 16 -gpgpu_l1_l2_coalesce_min_cycles 64"
+COALESCE32_0:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 32 -gpgpu_l1_l2_coalesce_min_cycles 0"
+COALESCE32_16:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 32 -gpgpu_l1_l2_coalesce_min_cycles 16"
+COALESCE32_32:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 32 -gpgpu_l1_l2_coalesce_min_cycles 32"
+COALESCE32_64:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 32 -gpgpu_l1_l2_coalesce_min_cycles 64"
+COALESCE64_0:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 64 -gpgpu_l1_l2_coalesce_min_cycles 0"
+COALESCE64_16:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 64 -gpgpu_l1_l2_coalesce_min_cycles 16"
+COALESCE64_32:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 64 -gpgpu_l1_l2_coalesce_min_cycles 32"
+COALESCE64_64:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 64 -gpgpu_l1_l2_coalesce_min_cycles 64"
+COALESCE128_0:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 128 -gpgpu_l1_l2_coalesce_min_cycles 0"
+COALESCE128_16:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 128 -gpgpu_l1_l2_coalesce_min_cycles 16"
+COALESCE128_32:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 128 -gpgpu_l1_l2_coalesce_min_cycles 32"
+COALESCE128_64:
+    extra_params: "-gpgpu_l1_l2_coalesce_buffer_size 128 -gpgpu_l1_l2_coalesce_min_cycles 64"
